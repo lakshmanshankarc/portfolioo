@@ -1,38 +1,36 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-function App() {
+let letters = Array.from("");
+
+const containerVariants = {
+    visible: {
+        transition: { staggerChildren: 0.05, delayChildren: 0.2 }
+    },
+    hidden: {}
+};
+
+const letterVariants = {
+    visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 300 } },
+    hidden: { y: 100, opacity: 0 }
+};
+
+export const MagicalText = ({ name }: { name: string }) => {
+    letters=Array.from(name);
     return (
-        <div className=" mt-64">
-
-            {/* 
-            </motion.area>  <motion.h1
-                animate={{ x: [50, 200, 50], opacity: 1, scale:1}}
-                transition={{
-                    duration: 1.4,
-                    delay: 0.5,
-                    ease: [0.5, 0.71, 1, 1.5],
-                }}
-                initial={{ opacity: 0, scale: 1.5 }}
-                whileHover={{ scale: 1.8 }}
+        <AnimatePresence>
+            <motion.h1
+                className={`hle`}
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
             >
-                Animation made easy with Framer Motion
+                {letters.map((letter, index) => (
+                    <motion.span key={index} variants={letterVariants}>
+                        {letter}
+                    </motion.span>
+                ))}
             </motion.h1>
-
-            
-            <motion.button whileHover={{ scale: 1.2 }}
-                whileTap={{scale:1.5}}
-            >
-                Hwllo btn
-            </motion.button> */}
-            <Rotatory />
-        </div>
+        </AnimatePresence>
     );
-}
-export default App;
-
-export function Rotatory() {
-    return (
-        <>
-        </>
-    )
-}
+};
