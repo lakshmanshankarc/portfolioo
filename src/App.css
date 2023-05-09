@@ -66,26 +66,14 @@ html::-webkit-scrollbar-track {
   transform: rotate(-45deg);
 }
 
-.profile {
-  margin: 0;
-  padding: 0;
+.profile-img{
   width: 500px;
   height: 500px;
-  background: url("./images/profile.png");
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0px 10px 10px rgb(93, 93, 93);
 }
-
 @media screen and (max-width:1200px) {
-
-  .profile {
-  width: 450px;
-  height: 450px;
-  background: url("./images/profile.png");
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0px 10px 10px rgb(93, 93, 93);
+.profile-img{
+  width: 500px;
+  height: 500px;
 }
 }
 
@@ -109,28 +97,13 @@ html::-webkit-scrollbar-track {
     transition: 0.4s;
     transform: translateX(0);
   }
-  .imageDiv {
-    z-index: 1;
-    width: 220px;
-    height: 220px;
-    background: url("../public/images/profile.jpeg");
+  .profile-img {
+    width: 330px;
+    height: 340px;
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
-    padding: 3px;
-  }
 
-  .iborder {
-    box-shadow: inset 1px 1px 10px 10px var(--bg3);
-  }
-
-  .profile {
-    width: 300px;
-    height: 330px;
-    background: url("./assets/images/profile.png");
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0px 10px 10px rgb(227, 223, 223);
+    border-radius: 20px;
   }
   .zi99{
     z-index: 99;

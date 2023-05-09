@@ -8,8 +8,6 @@ function App() {
     <div className="App bg-black" >
       <Navbar />  
       <About />
-      
-      <About />
     </div>
   )
 }
