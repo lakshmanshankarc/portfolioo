@@ -19,11 +19,6 @@ const projectsTwo = {
 //     links: ["https://github.om", "daksld"],
 //     techStack: ["React", "Tailwind", "Framer Motion"]
 // }
-
-
-
-
-
 export default function Pro() {
     const ProjectsMap = [projectsOne, projectsTwo]
     return <div className='bg-gradient-to-r from-red-100 to-amber-100 my-4'>
