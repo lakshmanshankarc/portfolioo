@@ -12,7 +12,7 @@ export default function Navbar() {
     useEffect(() => {
         // if window is resized to desktop size, hide the menu
         if (window.innerWidth > 768) {
-            console.log('desktop')
+            // console.log('desktop')
         }
         else {
             const dom = document.getElementById('nav-bar')
