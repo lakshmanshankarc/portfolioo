@@ -21,21 +21,23 @@ const projectsTwo = {
 // }
 export default function Pro() {
     const ProjectsMap = [projectsOne, projectsTwo]
-    return <div className='bg-gradient-to-r from-red-100 to-amber-100 my-4'>
+    return <div className=' w-full bg-gradient-to-r from-red-100 to-amber-100 my-4' id='projects'>
         <div className=" text-4xl text-orange-600 mx-2 p-3 my-5 py-2 font-ubuntu md:text-6xl lg:text-6xl">
             <MagicalText name='Projects' />
         </div>
-        {
-            ProjectsMap.map((project) => (
-                <Project
-                    title={project.title}
-                    description={project.description}
-                    links={project.links}
-                    techStack={project.techStack}
-                    key={project.title}
-                />
-            ))
-        }
+        <div className="w-full flex flex-col sm:justify-evenly items-center">
+            {
+                ProjectsMap.map((project) => (
+                    <Project
+                        title={project.title}
+                        description={project.description}
+                        links={project.links}
+                        techStack={project.techStack}
+                        key={project.title}
+                    />
+                ))
+            }
+        </div>
     </div>
 
 }

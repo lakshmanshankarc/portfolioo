@@ -6,10 +6,10 @@ import github from "../../src/assets/icons/github.svg"
 import { motion } from "framer-motion";
 function About() {
     const LinkNames = [github, linkedin, twitter, medium]
-    const LinkLinks=['https://github.com/Lakshmanshankar',]
+    const LinkLinks = ['https://github.com/Lakshmanshankar', "https://www.linkedin.com/in/lakshmanshankar/", "https://twitter.com/10Lakshman","https://medium.com/@lakshmanashankrc"]
 
     return (
-        <div className='w-full flex flex-col lg:flex-row h-full items-center mt-14 bg-slate-300 bg-gradient-to-r from-red-200 to-amber-100 justify-start md:py-24 lg:py-36 py-10'>
+        <div className='w-full flex flex-col lg:flex-row h-full items-center mt-14 bg-slate-300 bg-gradient-to-r from-red-200 to-amber-100 justify-start md:py-24 lg:py-36 py-10' id="about">
             <img
                 src={Profile}
                 className='rounded-lg sm:ml-10 sm:mt-14 md:rounded-2xl p-1.5 profile-img'
@@ -23,14 +23,14 @@ function About() {
 
                 <AboutText />
 
-                <div className=" font-thin lg:text-2xl text-lg">
-                   
+                <div className=" font-thin lg:text-2xl text-lg" id="contacts">
+
                     <div className='flex w-fit h-fit justify-evenly p-2'>
-                        {LinkNames.map((item:string) =>
-                            <div className='mx-1 rounded p-2' key={item.toString()}>
-                                <Icons name={item} />
-                            </div>
-                        )}
+                        {
+                            LinkNames.map((name, index) => {
+                                return <Icons name={name} link={LinkLinks[index]} key={index} />
+                            })
+                        }
                     </div >      
                 </div>
             </div>
@@ -40,16 +40,18 @@ function About() {
 }
 export default About
 
-function Icons({ name }: { name: any }) {
+function Icons({ name,link }: { name: any,link:any }) {
     return (
-        <img
-            src={name}
-            className='w-12 h-12 md:w-14 md:h-14 rounded-md  hover:animate-ping'
-            alt={name}
-            draggable={true}
-        />
+        <a href={link} className="w-12 h-12 md:w-14 md:h-14 mx-3">
+            <img
+                src={name}
+                className='w-12 h-12 md:w-14 md:h-14 rounded-md  hover:animate-ping'
+                alt={name}
+                draggable={true}
+            />
+        </a>
+       
     )
-    
 }
 
 

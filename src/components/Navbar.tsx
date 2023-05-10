@@ -32,10 +32,10 @@ export default function Navbar() {
             <ul className='flex-col justify-evenly  py-48 makecenter m-0 items-center slidein h-screen mt-10 p-0 sm:mt-0 sm:w-full sm:h-max sm:items-start sm:py-2 sm:flex-row sm:flex sm:px-8 sm:justify-between  md:px-16 md:justify-around lg:justify-evenly lg:w-2/3 w-full sm:bg-transparent lg:bg-transparent bg-orange-100 zi99' id='nav-bar'
                 onClick={setVis}
             >
-                <li><a href="/" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>Home</a></li>
-                <li><a href="/" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>About</a></li>
-                <li><a href="/" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>Projects</a></li>
-                <li><a href="/" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>Contacts</a></li>
+                <li><a href="#home" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>Home</a></li>
+                <li><a href="#about" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>About</a></li>
+                <li><a href="#projects" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>Projects</a></li>
+                <li><a href="#contacts" className={` p-1 sm:bg1 slowscale font-rale font-extrabold text-xl lg:bg-transparent`}>Contacts</a></li>
             </ul>
             <div className="w-max px-2 flex ">
                 <button onClick={setVis} className={`sm:hidden`}>
