@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import MenuIcon from './Menuicon';
 export default function Navbar() {
     const [state, setState] = useState(true);
     const [toggle, setToggle] = useState(false);
-    const [theme, setTheme] = useState(false);
+
     const setVis = (e: any) => {
         setState(!state)
         setToggle(!toggle)
     }
-
     useEffect(() => {
         // if window is resized to desktop size, hide the menu
-        if (window.innerWidth > 768) {
-            // console.log('desktop')
-        }
-        else {
+        if (window.innerWidth < 768) {
             const dom = document.getElementById('nav-bar')
             if (toggle) {
                 dom?.classList.remove('slidein')
@@ -25,9 +21,8 @@ export default function Navbar() {
             }
         }
     }, [toggle])
-
     return (
-        <nav className={`w-full blurrish z-50 py-1 lg:py-2 flex justify-between sm:rounded-lg lg:rounded-lg sm:py-0 lg:bg-transparent lg:w-full lg:shadow-sm fixed -mt-14   `}>
+        <nav className={`w-full blurrish z-50 py-1.5 lg:py-2 flex justify-between sm:rounded-lg lg:rounded-lg sm:py-0 lg:bg-transparent lg:w-full lg:shadow-sm fixed -mt-12   `}>
             <span className=' w-max px-2 py-2 text2 lg:text-xl lg:px-5'>Portfolio</span>
             <ul className='flex-col justify-evenly  py-48 makecenter m-0 items-center slidein h-screen mt-10 p-0 sm:mt-0 sm:w-full sm:h-max sm:items-start sm:py-2 sm:flex-row sm:flex sm:px-8 sm:justify-between  md:px-16 md:justify-around lg:justify-evenly lg:w-2/3 w-full sm:bg-transparent lg:bg-transparent bg-orange-100 zi99' id='nav-bar'
                 onClick={setVis}

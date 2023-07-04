@@ -18,8 +18,6 @@ function MenuIcon(props: any) {
             dom2?.classList.add('menu-i-line-btwo')
         }
     }, [props.props])
-
-    console.log(toggle)
     return (
         <div className=' w-10 h-10 flex flex-col items-center justify-center relative' onClick={() => setToggle(!props.props)}>
             <div className=' w-9/12 h-1 menu-i-line-bone bg1' id='line-one-bne'></div>

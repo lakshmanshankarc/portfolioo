@@ -25,7 +25,7 @@ function About() {
 
                 <div className=" font-thin lg:text-2xl text-lg" id="contacts">
 
-                    <div className='flex w-fit h-fit justify-evenly p-2'>
+                    <div className=' w-full flex h-fit justify-evenly p-2 '>
                         {
                             LinkNames.map((name, index) => {
                                 return <Icons name={name} link={LinkLinks[index]} key={index} />
@@ -45,7 +45,7 @@ function Icons({ name,link }: { name: any,link:any }) {
         <a href={link} className="w-12 h-12 md:w-14 md:h-14 mx-3">
             <img
                 src={name}
-                className='w-12 h-12 md:w-14 md:h-14 rounded-md  hover:animate-ping'
+                className='w-12 h-12 md:w-14 md:h-14 rounded-md hover:border-separate'
                 alt={name}
                 draggable={true}
             />
@@ -53,7 +53,6 @@ function Icons({ name,link }: { name: any,link:any }) {
        
     )
 }
-
 
 const textVariants = {
     hidden: {
@@ -73,7 +72,7 @@ const textVariants = {
 const AboutText = () => {
     return (
         <motion.div
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed text-gray-700 mt-8"
+            className="text-md md:text-xl lg:text-2xl xl:text-2xl leading-relaxed text-gray-700 mt-8"
             variants={textVariants}
             initial="hidden"
             animate="visible"
