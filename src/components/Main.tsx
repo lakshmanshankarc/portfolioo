@@ -6,9 +6,9 @@ function Main() {
          
             
             <div className="two w-full lg:w-full justify-center items-center xl:w-max ">
-            <h1 className={`spring w-full text-6xl text-center sm:text-6xl lg:6xl lg:px-16 xl:text-8xl back-gradient ml-5 sm:ml-0  sm:py-0 sliding text1 mt-5 sm:mt-5 justify-center pl-3 sm:p-1`}>
+            <h1 className={`spring w-full text-6xl text-center sm:text-6xl lg:6xl lg:px-16 xl:text-8xl back-gradient  sm:ml-0  sm:py-0 sliding text1 mt-5 sm:mt-5 justify-center pl-3 sm:p-1`}>
                 Hi, I am </h1>
-                <h1 className={`spring w-full text-6xl text-center sm:text-6xl lg:6xl lg:px-16 xl:text-8xl back-gradient ml-5 sm:ml-0  sm:py-0 sliding text1 mt-5 sm:mt-5 justify-center pl-3 sm:p-1`}>
+                <h1 className={`spring w-full text-6xl text-center sm:text-6xl lg:6xl lg:px-16 xl:text-8xl back-gradient  sm:ml-0  sm:py-0 sliding text1 mt-5 sm:mt-5 justify-center pl-3 sm:p-1`}>
                     <span className=' highlight underline text-orange-500 font-bold'>Lakshman</span>
                 </h1> 
                 <br />
